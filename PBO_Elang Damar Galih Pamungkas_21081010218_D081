@@ -1,0 +1,90 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package pbo;
+import java.util.Scanner;
+/**
+ *
+ * @author Elang
+ */
+
+public class Pbo {
+     private String department;
+     private String pengalaman;
+     private String skill;
+     private int gaji;
+    
+    public Pbo(String department,String pengalaman,String skill) {
+        this.department = department;
+        this.pengalaman = pengalaman;
+        this.skill      = skill;
+        
+        
+    }
+     public void department() {
+        if (department.equals("IT")) {
+            gaji = 8000000;
+           System.out.println ("departmen saya"+department);
+        } else if  (department.equals("HRD")) {
+            gaji = 5000000;
+          System.out.println ("departmen saya"+department);
+        } else if (department.equals("finance")) {
+            gaji = 4000000;
+          System.out.println ("departmen saya"+department);
+        }
+    }
+     
+      public void pengalaman() {
+        if (pengalaman.equals("pemula")) {
+            gaji = gaji+500000;
+           System.out.println ("pengalaman saya"+pengalaman);
+        } else if  (pengalaman.equals("menengah")) {
+            gaji = gaji+1000000;
+            System.out.println ("pengalaman saya"+pengalaman);
+        } else if (pengalaman.equals("expert")) {
+            gaji = 2000000;
+            System.out.println ("pengalaman saya"+pengalaman);
+        }
+    }
+      
+      public void skill() {
+        if (skill.equals("web")) {
+            gaji = gaji+1000000;
+           System.out.println ("skill saya"+skill);
+            System.out.println ("gaji saya"+gaji);
+        } else if  (skill.equals("mobile")) {
+            gaji = gaji+2000000;
+            System.out.println ("skill saya"+skill);
+             System.out.println ("gaji saya"+gaji);
+        } else if (skill.equals("desktop")) {
+            gaji = gaji+2500000;
+            System.out.println ("skill saya"+skill);
+             System.out.println ("gaji saya"+gaji);
+        }
+    }
+      
+             
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String nama ;
+        String alamat ;
+        String pengalaman ="pemula";
+        String skill = "web";
+        String departmen ="HRD";
+        
+        nama = "Budi";
+        alamat = "Jombang";
+            System.out.println ("nama saya= "+nama);
+             System.out.println ("alamat saya= "+alamat);
+        Pbo ok = new Pbo(departmen,pengalaman,skill);
+        ok.department();
+        ok.pengalaman();
+        ok.skill();          
+        }
+}
+
+
